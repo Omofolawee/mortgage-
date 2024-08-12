@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      padding: 0;
+      margin:0 ;
+      box-sizing: border-box;
+    }
+    .body{
+      display: flex;
+      justify-content: center;
+      background-color: skyblue; 
+      width: 100%;
+      height: 100vh;
+      align-items:center;
+          }
+    .first{
+      background-color: white;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 80px;
+      text-align: left;
+      width: 50%;
+      height: 50vh;
+    }
+    .second{
+      border-bottom-left-radius: 10px;
+      background-color: darkslategray;
+      padding: 40px 30px 60px 30px;
+      margin:3px solid yellow;
+      width:50%;
+      height: 50vh;
+    }
+    .repayment{
+      background-color: rgba(18, 50, 50, 0.779);
+      margin-top: 20px;
+      border-radius: 5px;
+      border-top: 3px solid yellow;
+      text-align: left;
+    }
+    .term-rate{
+      display: flex;
+      justify-content: space-between;
+    }
+    .mortgage-type{
+
+    }
+
+    .heading{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button{
+      border-radius: 40px;
+      padding: 10px 40px;
+      border: none;
+      background-color: yellow;
+      color: darkslategray;
+      font-weight:700 ;
+    }
+
+    @media screen and (max-width:960px){
+      .body{
+        flex-direction: column;
+      }
+      .first, .second{
+        width: 100%;
+      }
+      button{
+        background-color: red;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="body">
+    <div class="first">
+      <div class="heading">
+        <div style="color: darkslategray;">Mortgage Calculator</div>
+        <div>Clear All</div>
+      </div>
+      <div>Mortgage Amount</div>
+      <input type="number">
+      <div class="term-rate">
+        <div>Mortgage Term
+          <input type="number">
+        </div>
+        <div>Interest Rate
+          <input type="number">
+        </div>
+      </div>
+      Mortgage Type
+      <div class="mortgage-type">
+        Repayment
+        Interest Only
+      </div>
+      <button>Calculate Repayments</button>
+    </div>
+    <!-- Empty results start -->
+    <!-- Results shown here
+    Complete the form and click “calculate repayments” to see what
+    your monthly repayments would be. -->
+    <!-- Empty results end -->
+    <!-- Completed results start -->
+    <div class="second" style="color: white;">
+      <h4 style="font-size: 25px; margin-top: 5px; margin-bottom: 10px;">Your results</h4>
+      Your results are shown below based on the information you provided.
+      To adjust the results, edit the form and click “calculate repayments” again.
+      <div class="repayment">
+        Your monthly repayments
+        <div style="color: yellow; font-size: 60px;">$1,797.74</div>
+        <hr>
+        Total you'll repay over the term
+        <div style="font-size: 30px;">$539,322.94</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Completed results end -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
